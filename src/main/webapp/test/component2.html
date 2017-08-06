@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>AdminLTE 2 | Starter</title>
+    <script src="/common/js/head.js"></script>
+    <title>Title</title>
+</head>
+<body>
+
+<div id="example">{{msg}}</div>
+<script types="text/javascript">
+
+    // 对于component下面的调用方法
+    Vue.component('example', {
+        template: '<span>{{msg}}</span>',
+        data: function () {
+            return {
+                msg: 'not updated'
+            }
+        },
+        methods: {
+            updateMessage: function () {
+                this.msg = 'updated'
+                console.log(this.$el.textContent) // => 'not updated'
+                this.$nextTick(function () {
+                    console.log(this.$el.textContent) // => 'updated'
+                })
+            }
+        }
+    })
+
+    var vm = new Vue({
+        el: '#example',
+        data: {
+            msg: '123'
+        },
+        methods: {
+            tt: function () {
+                alert("tt");
+            }
+        }
+    });
+
+    vm.tt();
+
+    //    console.log(vm.msg);
+//    vm.msg = 'new message' // change data
+//    console.log(vm.msg);
+//    vm.$el.textContent === 'new message' // false
+//    console.log(vm.$el.textContent);
+
+    Vue.nextTick(function () {
+        vm.$el.textContent === 'new message' // true
+    })
+
+</script>
+</body>
+</html>
