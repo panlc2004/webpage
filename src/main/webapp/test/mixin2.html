@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>AdminLTE 2 | Starter</title>
+    <script src="/common/js/head.js"></script>
+    <title>Title</title>
+</head>
+
+<body>
+
+<div id="app">123</div>
+
+</body>
+<script types="text/javascript">
+
+    var mixin = {
+        methods: {
+            foo: function () {
+                console.log('foo')
+            },
+            conflicting: function () {
+                console.log('from mixin')
+            }
+        }
+    }
+    var vm = new Vue({
+        mixins: [mixin],
+        methods: {
+            bar: function () {
+                console.log('bar')
+            },
+            conflicting: function () {
+                console.log('from self')
+            }
+        }
+    })
+    vm.foo() // -> "foo"
+    vm.bar() // -> "bar"
+    vm.conflicting() // -> "from self"
+
+
+</script>
+
+</html>

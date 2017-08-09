@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>AdminLTE 2 | Starter</title>
+    <script src="/common/js/head.js"></script>
+    <title>Title</title>
+</head>
+
+<body>
+
+<div id="app">123</div>
+
+</body>
+<script types="text/javascript">
+
+    var mixin = {
+        created: function () {
+            alert('mixin hook called')
+        }
+    }
+    new Vue({
+        mixins: [mixin],
+        created: function () {
+            alert('component hook called')
+        }
+    })
+    // -> "mixin hook called"
+    // -> "component hook called"
+
+</script>
+
+</html>
