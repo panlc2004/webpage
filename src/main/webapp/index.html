@@ -11,20 +11,20 @@
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
-    <!-- Main Header -->
+<div id="main-panel" class="wrapper">
+    <!-- 导航栏 -->
     <header class="main-header">
         <!-- Logo -->
         <a href="index.html" class="logo">
-            <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><b>A</b>LT</span>
-            <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>Admin</b>LTE</span>
+            <!--菜单收缩时的logo,50x50 pixels-->
+            <span class="logo-mini"><b>SEED</b></span>
+            <!-- 菜单展开时的logo -->
+            <span class="logo-lg"><b>CZY</b>-SEED</span>
         </a>
 
         <!-- Header Navbar -->
         <nav class="navbar navbar-static-top" role="navigation">
-            <!-- Sidebar toggle button-->
+            <!-- 菜单收缩按钮-->
             <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
                 <span class="sr-only">Toggle navigation</span>
             </a>
@@ -124,8 +124,7 @@
 
         <!-- 动态加载区 -->
         <section class="content" style="background:#fff;">
-            <iframe scrolling="yes" frameborder="0"
-                    style="width:100%;min-height:200px;overflow:visible;background:#fff;" :src="main"></iframe>
+            <iframe scrolling="yes" frameborder="0" style="width:100%;min-height:200px;overflow:visible;background:#fff;" :src="loadUrl"></iframe>
         </section>
 
     </div>
@@ -196,10 +195,8 @@
                             Some information about this general settings option
                         </p>
                     </div>
-                    <!-- /.form-group -->
                 </form>
             </div>
-            <!-- /.tab-pane -->
         </div>
     </aside>
     <!-- /.control-sidebar -->
@@ -208,7 +205,7 @@
     <div class="control-sidebar-bg"></div>
 </div>
 
-<script src="common/index.js"></script>
+<script src="common/js/index.js"></script>
 
 </body>
 </html>
